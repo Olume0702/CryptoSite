@@ -1,0 +1,158 @@
+.third {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px;
+    padding-top: 0rem;
+    height: 42rem;
+}
+
+#bal {
+    margin-left: 1rem;
+    height: 40rem;
+    width: 25rem;
+}
+
+.B {
+    margin-right: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.B h3 {
+    font-size: 55px;
+}
+
+.B1 {
+    display: flex;
+    gap: 1rem;
+}
+
+input {
+    height: 50px;
+    width: 15rem;
+    border: 1px solid grey;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: transparent;
+    padding-left: 2rem;
+}
+
+::placeholder {
+    color: rgb(167, 175, 114);
+}
+
+#butt {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+#butt:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+#butt:active {
+    color: #000
+}
+
+#butt:active:after {
+    background: transparent;
+}
+
+#butt:hover:before {
+    opacity: 1;
+}
+
+#butt:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+    .third {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding-top: 5rem;
+        height: auto;
+    }
+
+    #bal {
+        width: 100%;
+    }
+
+    .B {
+        margin-right: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    input {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+.third{
+    margin-top: -130px;
+    margin-bottom: 20px;
+}
+
+    .B h3 {
+        font-size: 40px;
+    }
+
+    .B1 {
+        display: flex;
+        gap: -1rem;
+    }
+    input {
+        width: 90%;
+        margin-left: 10px;
+    }
+
+    #butt {
+        margin-right: 5px;
+    }
+}

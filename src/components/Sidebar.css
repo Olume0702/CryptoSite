@@ -1,0 +1,35 @@
+.side-navbar {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 55px;
+    height: 15rem;
+    background-color:transparent;
+    z-index: 1000;
+    /* border: 1px solid red; */
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.social-icons li {
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    background-color: #555;
+}
